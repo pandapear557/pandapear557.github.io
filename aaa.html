@@ -1,0 +1,129 @@
+
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>Overfitting</b></h2>
+<p style="text-align: center;" data-ke-size="size18">Overfitting, 번역하면 과적합입니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">말 그대로 train data에 너무 최적화되어 weight값이 업데이트되어,</p>
+<p style="text-align: center;" data-ke-size="size18">train data에 대해서는 좋은 성능을 보이지만</p>
+<p style="text-align: center;" data-ke-size="size18">새로운 데이터에 대해서는 성능이 오히려 떨어지게 되는 현상을 의미합니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">Overfitting은 보통 모델의 파라미터 수에 비해</p>
+<p style="text-align: center;" data-ke-size="size18">train data 수가 적을 때 발생하게 됩니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">이 문제는 현재까지도 완벽히 해결할 수 있는 방법은 나오지 않았습니다.</p>
+<p style="text-align: center;" data-ke-size="size18">다만 이를 억제하기 위해서 다양한 방법들이 있는데</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">간단한 방법으로는 train data수가 적음으로 발생하는 문제이므로</p>
+<p style="text-align: center;" data-ke-size="size18">반대로 train data의 수를 늘려주거나, 모델의 파라미터 수를 줄여주는 방법이 있습니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">또 Overfitting이 되기 전에 학습을 멈추어 가장 최상의 성능을 가지는</p>
+<p style="text-align: center;" data-ke-size="size18">weight값을 저장하는 방법이 있으며, 이를 Early Stopping이라 합니다.</p>
+<p>[##_Image|kage@eqIoty/btrPJc4G4h6/OCkj2ON6qnkZKc6JeSEhCk/img.png|CDM|1.3|{"originWidth":686,"originHeight":396,"style":"alignCenter"}_##]</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">하지만 train data를 Overfitting이 억제될정도로 구하기란 쉬운일이 아니며,</p>
+<p style="text-align: center;" data-ke-size="size18">기본적으로 모델의 층이 깊어질 수록 성능이 좋아지기에</p>
+<p style="text-align: center;" data-ke-size="size18">모델의 단순화 역시 좋은 방법은 아닙니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">그렇게 나온 Overfitting을 억제하기 위해 다양한 방법론들이 주장되었고,</p>
+<p style="text-align: center;" data-ke-size="size18">그중 Regularization(규제)에 대해 알아보겠습니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>Regularization</b></h2>
+<p style="text-align: center;" data-ke-size="size18">overfitting은 모델이 데이터에 대해 너무 과적합되어 발생하는 문제입니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">즉, 새로운 데이터에 대해서 적합하게 만들기 위해</p>
+<p style="text-align: center;" data-ke-size="size18">학습하는 과정에서 데이터에 대해 덜 적합하게 하기 위해 규제를 넣어주는 것입니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">즉 regularization을 함으로써 overfitting을 어느정도 막을 수 있으며,</p>
+<p style="text-align: center;" data-ke-size="size18">이번 글에서는 regularization의 방법인 Weight Decay와 Dropout을 소개하겠습니다.</p>
+<p style="text-align: center;" data-ke-size="size16">(overfitting을 막을 수 있는 완벽한 방법은 아직 존재하지 않는다)</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>Weight Decay</b></h2>
+<p style="text-align: center;" data-ke-size="size18">regularization의 방법중 하나인 weight decay 에는 두가지 방법이 존재합니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">"L(1) - regularization" 과 "L(2) - regularization" 인데,</p>
+<p style="text-align: center;" data-ke-size="size18">두 규제 모두 기존의 손실함수에 패널티를 더해 새로운 손실함수를 만들어</p>
+<p style="text-align: center;" data-ke-size="size18">정보를 잃게 하여 overfitting을 방지합니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style3" />
+<p style="text-align: center;" data-ke-size="size18"><b><span>L(</span><span>1)</span><span style="color: #000000;">-regularization : </span><span style="color: #000000;">새로운 </span><span style="color: #000000;">손실함수</span><span style="color: #000000;"> </span><span style="color: #000000;">= </span><span style="color: #000000;">기존 </span><span style="color: #000000;">손실함수</span><span style="color: #000000;"> </span><span style="color: #000000;">+ </span><span>&lambda;&times;</span><span style="color: #000000;">(</span><span style="color: #000000;">가중치의 </span><span style="color: #000000;">절대값의 </span><span style="color: #000000;">합</span><span style="color: #000000;">)</span></b></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">L(1) 규제는 모든 가중치를 적게 낮추어 작은 가중치들을 사라지게 합니다.</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18"><b><span>L(2)</span><span style="color: #000000;">-regularization : </span><span style="color: #000000;">새로운 </span><span style="color: #000000;">손실함수</span><span style="color: #000000;"> </span><span style="color: #000000;">= </span><span style="color: #000000;">기존 </span><span style="color: #000000;">손실함수</span><span style="color: #000000;"> </span><span style="color: #000000;">+ </span><span>1/2</span><span>&times;&lambda;&times;</span><span style="color: #000000;">(</span><span style="color: #000000;">가중치의 제곱의 합</span><span style="color: #000000;">)</span></b></p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16">L(2) 규제는 큰 가중치는 크게 낮추고, 작은 가중치는 적게 낮춥니다.</p>
+<p style="text-align: center;" data-ke-size="size16">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size16"><b><span>(&lambda;는 가중치 감소 계수로</span></b></p>
+<p style="text-align: center;" data-ke-size="size16"><b><span>클수록 패널티의 역할이 커지고, 정보를 더 많이 잃게 한다)</span></b></p>
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style3" />
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">Optimizer가 패널티를 더한 새로운 손실함수를 낮추는 것은</p>
+<p style="text-align: center;" data-ke-size="size18">기존의 손실함수와 패널티 둘 모두 낮추는 것입니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">기존의 손실함수를 낮추는 것은 가중치가 데이터에 fitting되어가는 것을 의미하고,</p>
+<p style="text-align: center;" data-ke-size="size18">패널티를 낮추는 것은 가중치 모두를 0으로 만들어 정보를 잃게 하는 것을 의미합니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<h2 style="text-align: center;" data-ke-size="size26"><b>Dropout</b></h2>
+<p style="text-align: center;" data-ke-size="size18">regularization을 위한 방법인 Dropout은</p>
+<p style="text-align: center;" data-ke-size="size18">뉴런을 무작위로 선택해 삭제하여 신호전달을 차단하는 방식으로 진행됩니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p>[##_Image|kage@cVLJYP/btrPRdWR8MV/vWIDeOaBIOvKEVeEYie4dk/img.png|CDM|1.3|{"originWidth":810,"originHeight":445,"style":"alignCenter","caption":"밑바닥부터 시작하는 딥러닝"}_##]</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">왼쪽 (a)가 Dropout을 적용하기 전의 신경망 모습입니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">Dropout을 적용하게 되면 사람이 정해준 일정 비율로</p>
+<p style="text-align: center;" data-ke-size="size18">랜덤하게 뉴런을 죽이고, 이를 매 학습할때마다 반복합니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">물론 Dropout은 train할 때 overfitting을 방지하기 위해 존재하는 층이며,</p>
+<p style="text-align: center;" data-ke-size="size18">test를 할 때는 뉴런들을 랜덤하게 죽이지 않습니다.</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
+<p style="text-align: center;" data-ke-size="size18">&nbsp;</p>
