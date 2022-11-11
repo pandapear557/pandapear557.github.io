@@ -83,7 +83,7 @@ out.
 
 ![hist2](https://raw.githubusercontent.com/pandapear557/pandapear557.github.io/main/assets/img/ideaNote_cat/img2.png)
 
- 왼쪽 그림이 88,99를 제거한 데이터 프레임의 히스토, 오른쪽이 `Gen_bins`의 bins를 통해 `np.digitize` 한 데이터 프레임의 히스토이다.
+ 위 쪽 그림이 88,99를 제거한 데이터 프레임의 히스토, 아래 쪽이 `Gen_bins`의 bins를 통해 `np.digitize` 한 데이터 프레임의 히스토이다.
 
 그렇다. `np.histogram` 메소드는 빈도 기준으로 bins를 생성하지 않는다. 그냥 min-max를 통해 나눌 뿐이다. 하지만 메타 데이터 파일에 포함한 데이터였던 만큼 그누구도 눈치채지 못했다..
 
