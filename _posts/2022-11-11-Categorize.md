@@ -79,7 +79,7 @@ out.
 
 `np.histogram` 메소드를 사용하여 빈도 분위로 나누어 주었는데 사실 이것은 목적에 맞지 않다
 
-![hist1](({{ site.baseurl }}/assets/img/ideaNote_cat/img1.png)
+![hist1]({{ site.baseurl }}/assets/img/ideaNote_cat/img1.png)
 
 ![hist2](({{ site.baseurl }}/assets/img/ideaNote_cat/img2.png)
 
